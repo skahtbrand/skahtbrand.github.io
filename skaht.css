@@ -1,0 +1,120 @@
+:root {
+    --background-dark: #111111;
+    --background-medium: #191919;
+    --background-light: #f7f7f7;
+    --white: #f7f7f7;
+    --yellow: #ecd306;
+    --footer-text:  #f7f7f7;
+    --copyright-text: #757575;
+}
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+h1, h2 {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+/* index.html */
+.pageContainer .heroSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 0 8vw;
+    background-color: var(--background-dark);
+    color: var(--white);
+}
+.heroSection h1.hello {
+    font-size: calc(36px + (60 - 36) * ((100vw - 300px) / 1300));
+    font-weight: 700;
+    line-height: 1.1;
+}
+span.scott {
+    color: var(--yellow);
+}
+.heroSection .creativePerson {
+    font-size: calc(18px + (30 - 18) * ((100vw - 300px) / 1300));
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--yellow);
+}
+.pageContainer .startJourney {
+    display: flex;
+    flex-direction: column;
+    padding: 6vh 8vw;
+    background-color: var(--background-medium);
+    color: var(--white);
+}
+.pageContainer .startJourney h2 {
+    align-self: center;
+}
+.startJourney .journeyContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vh;
+    padding: 4vh 0;
+}
+img.desaturate {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: url(/elements/grayscale.svg#desaturate);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+}
+img.desaturate:hover {
+    filter: grayscale(0%);
+    filter: none;
+    -webkit-filter: grayscale(0);
+    cursor: pointer;
+}
+
+/* work */
+
+/* play */
+
+/* about */
+
+
+
+
+
+
+
+/* menu */
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 0;
+    width: 100%;
+    background-color: var(--background-dark);
+    color: var(--footer-text);
+}
+footer .socialMediaFooter {
+    display: flex;    
+    align-items: center;
+    min-height: 40px;
+}
+footer .socialMediaFooter a i {
+    font-size: 1.2rem;
+    color: var(--footer-text);
+    padding: 0 4px;
+}
+footer .socialMediaFooter a i:hover {
+    color: var(--yellow);
+}
+footer .copyRight {
+    font-size: 0.9rem;
+    color: var(--copyright-text);
+}
