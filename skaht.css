@@ -158,6 +158,16 @@ button.btn {
 button.btn:hover {
     background-color: var(--background-dark);
 }
+.playNext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.playNext a {
+    text-decoration: none;
+}
 
 /* about */
 .aboutContainer {
