@@ -10,6 +10,10 @@
     --footer-text:  #f7f7f7;
     --copyright-text: #757575;
 }
+::selection {
+    color: var(--white);
+    background-color: var(--black);
+}
 body {
     display: block;
     margin: 0;
@@ -42,22 +46,26 @@ strong {
     justify-content: center;
     min-height: 60vh;
     padding: 0 8vw;
-    background-color: var(--background-dark);
+    background-color: var(--yellow);
     color: var(--white);
 }
 .heroSection h1.hello {
     font-size: calc(36px + (60 - 36) * ((100vw - 300px) / 1300));
     font-weight: 700;
     line-height: 1.1;
+    color: var(--white);
+    -webkit-text-stroke: 2px var(--black);
+    -webkit-text-fill-color: var(--white);
 }
 span.scott {
-    color: var(--yellow);
+    color: var(--black);
+    -webkit-text-fill-color: var(--black);
 }
 .heroSection .creativePerson {
     font-size: calc(18px + (30 - 18) * ((100vw - 300px) / 1300));
     font-weight: 400;
     line-height: 1.5;
-    color: var(--yellow);
+    color: var(--black);
 }
 .pageContainer .startJourney {
     display: flex;
