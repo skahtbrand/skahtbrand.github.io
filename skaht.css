@@ -48,7 +48,7 @@ strong {
     justify-content: center;
     min-height: 60vh;
     padding: 0 8vw;
-    background-color: var(--black);
+    background-color: var(--background-dark);
     color: var(--white);
 }
 .heroSection h1.hello {
