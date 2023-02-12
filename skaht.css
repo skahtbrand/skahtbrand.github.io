@@ -2,11 +2,12 @@
     --background-dark: #111111;
     --background-medium: #191919;
     --background-light: #f7f7f7;
-    --background-content: #e3e3e3;
+    --background-content: #d3d3d3;
     --pure-white: #ffffff;
     --white: #f7f7f7;
     --black: #191919;
     --yellow: #ecd306;
+    --red: #df091c;
     --footer-text:  #f7f7f7;
     --copyright-text: #757575;
 }
@@ -30,7 +31,7 @@ a:visited {
     color: var(--black);
 }
 a:hover {
-    color: var(--yellow);
+    color: var(--red);
 }
 img {
     width: 100%;
@@ -46,7 +47,7 @@ strong {
     justify-content: center;
     min-height: 60vh;
     padding: 0 8vw;
-    background-color: var(--yellow);
+    background-color: var(--black);
     color: var(--white);
 }
 .heroSection h1.hello {
@@ -54,25 +55,25 @@ strong {
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
-    -webkit-text-stroke: 2px var(--black);
+    -webkit-text-stroke: 2px var(--red);
     -webkit-text-fill-color: var(--white);
 }
 span.scott {
-    color: var(--black);
-    -webkit-text-fill-color: var(--black);
+    color: var(--red);
+    -webkit-text-fill-color: var(--red);
 }
 .heroSection .creativePerson {
     font-size: calc(18px + (30 - 18) * ((100vw - 300px) / 1300));
     font-weight: 400;
     line-height: 1.5;
-    color: var(--black);
+    color: var(--white);
 }
 .pageContainer .startJourney {
     display: flex;
     flex-direction: column;
     padding: 6vh 8vw;
-    background-color: var(--background-medium);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 .pageContainer .startJourney h2 {
     align-self: center;
@@ -81,8 +82,15 @@ span.scott {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column-gap: 1vw;
-    grid-row-gap: 2vh;
+    grid-row-gap: 4vh;
     padding: 4vh 0;
+}
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
 }
 img.desaturate {
     filter: grayscale(100%);
@@ -100,7 +108,7 @@ img.desaturate:hover {
 
 /* common */
 .contentContainer {
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 224px);
     padding: 0 8vw;
 }
 .contentContainer h1 {
@@ -127,10 +135,17 @@ img.desaturate:hover {
     grid-row-gap: 4vh;
     margin-bottom: 4vh;
 }
+.workPageColumns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vh;
+}
 .pageContent {
     background-color: var(--background-content);
     padding: 2vw;
     margin-bottom: 4vh;
+    border-radius: 12px;
 }
 .pageContentWhite {
     background-color: var(--pure-white);
@@ -147,6 +162,8 @@ img.desaturate:hover {
     align-items: center;
     justify-content: center;
     margin: 2vh 0;
+    border-radius: 12px;
+    overflow: hidden;
 }
 .contentImage img {
     max-width: 1300px;
@@ -155,7 +172,7 @@ button.btn {
     color: var(--white);
     background-color: var(--black);
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     height: 54px;
     padding: 0 16px;
     cursor: pointer;
@@ -181,9 +198,9 @@ button.btn:hover {
 .aboutContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-column-gap: 2vw;
-    grid-row-gap: 4vh;
-    margin-bottom: 4vh;
+    grid-column-gap: 4vw;
+    grid-row-gap: 6vh;
+    margin-bottom: 6vh;
 }
 
 /* menu */
@@ -204,7 +221,7 @@ nav .navContainer {
     height: 60px;
 }
 nav .navContainer img {
-    height: 44px;
+    height: 38px;
     width: auto;
 }
 nav .navContainer .menuContainer {
@@ -218,7 +235,7 @@ nav .navContainer .menuContainer {
     list-style: none;
 }
 .menu ul li {
-    padding: 0 6px;
+    padding: 0 12px;
 }
 .menu ul li a {
     color: var(--white);
@@ -226,19 +243,21 @@ nav .navContainer .menuContainer {
 }
 .menu ul li a:hover {
     cursor: pointer;
-    color: var(--yellow);
+    color: var(--red);
 }
-.menu ul li.current {
+.menu ul li.current,
+.menu ul li a.current {
     font-weight: 600;
-    color: var(--yellow);
+    color: var(--red);
 }
+
 nav .navContainer .menuContainer .socialMedia a i {
     font-size: 1.2rem;
     color: var(--white);
     padding: 0 4px;
 }
 nav .navContainer .menuContainer .socialMedia a i:hover {
-    color: var(--yellow);
+    color: var(--red);
 }
 
 /* footer */
@@ -249,7 +268,7 @@ footer {
     justify-content: center;
     padding: 0;
     width: 100%;
-    height: 100px;
+    height: 164px;
     background-color: var(--background-dark);
     color: var(--footer-text);
 }
@@ -264,7 +283,7 @@ footer .socialMediaFooter a i {
     padding: 0 4px;
 }
 footer .socialMediaFooter a i:hover {
-    color: var(--yellow);
+    color: var(--red);
 }
 footer .copyRight {
     font-size: 0.9rem;
