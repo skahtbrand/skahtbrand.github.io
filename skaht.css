@@ -52,7 +52,7 @@ strong {
     color: var(--white);
 }
 .heroSection h1.hello {
-    font-size: calc(36px + (60 - 36) * ((100vw - 300px) / 1300));
+    font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
@@ -64,8 +64,9 @@ span.scott {
     -webkit-text-fill-color: var(--red);
 }
 .heroSection .creativePerson {
-    font-size: calc(18px + (30 - 18) * ((100vw - 300px) / 1300));
-    font-weight: 400;    
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 400;
+    padding-top: 4px;
     color: var(--white);
 }
 .pageContainer .startJourney {
@@ -76,22 +77,25 @@ span.scott {
     color: var(--black);
 }
 .pageContainer .startJourney h2 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     align-self: center;
     text-align: center;
 }
 .journeyContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-column-gap: 1vw;
+    grid-column-gap: 2vw;
     grid-row-gap: 4vh;
     padding: 4vh 0;
 }
 .tile {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 12px;
+    align-items: flex-start;    
     overflow: hidden;
+}
+.tile img {
+    border-radius: 12px;
 }
 img.desaturate {
     filter: grayscale(100%);
@@ -113,20 +117,20 @@ img.desaturate:hover {
     padding: 0 8vw;
 }
 .contentContainer h1 {
-    font-size: 2.6rem;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
     font-weight: 700;
     padding: 2vh 0;
 }
 .contentContainer h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
     padding: 1vh 0;
 }
 .contentContainer h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     padding: 1vh 0;
 }
 .contentContainer p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     padding: 0 0 2vh;
 }
 .pageColumns {
@@ -168,10 +172,10 @@ img.desaturate:hover {
     align-items: center;
     justify-content: center;
     margin: 2vh 0;
-    border-radius: 12px;
     overflow: hidden;
 }
 .contentImage img {
+    border-radius: 12px;
     max-width: 1300px;
 }
 button.btn {
@@ -193,7 +197,7 @@ button.btn:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: 600;
 }
 .playNext a {
@@ -292,6 +296,6 @@ footer .socialMediaFooter a i:hover {
     color: var(--red);
 }
 footer .copyRight {
-    font-size: 0.9rem;
+    font-size: clamp(0.5rem, 4vw, 0.9rem);
     color: var(--copyright-text);
 }
