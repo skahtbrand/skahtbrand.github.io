@@ -10,6 +10,7 @@
     --red: #df091c;
     --footer-text:  #f7f7f7;
     --copyright-text: #757575;
+    --button-hover: #000000;
 }
 ::selection {
     color: var(--white);
@@ -40,6 +41,22 @@ img {
 strong {
     font-weight: 700;
 }
+
+/* Whole page scroll */
+.pageContainer {
+    /* height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
+}
+.section {
+    /* height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    object-fit: cover;
+    object-position: center;
+    width: 100%; */
+}
+/* End Whole page scroll */
 
 /* index.html */
 .pageContainer .heroSection {
@@ -93,6 +110,10 @@ span.scott {
     justify-content: center;
     align-items: flex-start;    
     overflow: hidden;
+}
+.tile:hover {
+    outline: 4px solid var(--red);
+    border-radius: 16px;
 }
 .tile img {
     border-radius: 12px;
@@ -152,6 +173,9 @@ img.desaturate:hover {
     margin-bottom: 4vh;
     border-radius: 12px;
 }
+.pageColumns img {
+    border-radius: 12px;
+}
 @media screen and (max-width: 540px) {
     .pageContent {
         padding: 4vw;
@@ -187,11 +211,13 @@ button.btn {
     padding: 0 16px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.2;
     margin-bottom: 2vh;
 }
 button.btn:hover {
-    background-color: var(--background-dark);
+    outline: 4px solid var(--red);
+    background-color: var(--button-hover);
 }
 .playNext {
     display: flex;
@@ -212,6 +238,9 @@ button.btn:hover {
     grid-row-gap: 6vh;
     margin-bottom: 6vh;
 }
+.aboutContainer img {
+    border-radius: 12px;
+}
 
 /* menu */
 nav {
@@ -226,7 +255,7 @@ nav {
 }
 nav .navContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 20% 80%);
+    grid-template-columns: 20% 80%;
     align-items: center;
     height: 60px;
 }
